@@ -1251,6 +1251,13 @@ such as the top 5 most popular categories and the month with most posts.</p>
 </script>
 
 <script>
+    fetch('/.netlify/functions/logVisit?path=' + encodeURIComponent(window.location.pathname), {
+      method: 'GET',
+      keepalive: true
+    });
+  </script>
+  
+<script>
     let loadingIcons;
 
     function loading() {
