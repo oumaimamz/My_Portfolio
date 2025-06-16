@@ -1249,14 +1249,6 @@ such as the top 5 most popular categories and the month with most posts.</p>
     })
 
 </script>
-
-<script>
-    console.log("Logging visit script running!");
-    fetch('/.netlify/functions/logVisit?path=' + encodeURIComponent(window.location.pathname), {
-      method: 'GET',
-      keepalive: true
-    });
-</script>
   
 <script>
     let loadingIcons;
@@ -1270,6 +1262,14 @@ such as the top 5 most popular categories and the month with most posts.</p>
             document.getElementById("loading-icons").style.display = "block";
         } catch(err) {}
     }
+</script>
+
+<script>
+    console.log("Logging visit script running!");
+    fetch('/.netlify/functions/hello?path=' + encodeURIComponent(window.location.pathname), {
+      method: 'GET',
+      keepalive: true
+    });
 </script></body>
 
 </html>
